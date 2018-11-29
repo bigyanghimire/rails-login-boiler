@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+<li>
+    <%= link_to "SignOut", destroy_user_session_path, method: :delete %>
+</li>
+<li>
+    <%= current_user.email %>
+</li>
+<% else %>
+<li>
+    <%= link_to "SignIn", new_user_session_path %>
+</li>
+<li>
+    <%= link_to "SignUp", new_user_registration_path %>
+</li>
+<% end %>
+
+</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 menu">
+            <h2>Fields</h2>
+            <hr>
+
+
+        </div>
+        <div class="col-md-9 main">
+        </div>
+
+    </div>
+</div>
